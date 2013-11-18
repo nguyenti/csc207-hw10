@@ -28,11 +28,14 @@ public class UshahidiManager {
     //METHODS
     
    /**
-    * Read the incidents of a webclident into a DoublyLinkedList
+    * Read the incidents of a UshahidiClient into a DoublyLinkedList
     * @param webclient
     * @throws Exception
     */
-    public static void readIncidents(UshahidiClient webclient) throws Exception {
+    public void readIncidents(UshahidiClient client) throws Exception {
+	while (client.hasMoreIncidents()) {
+	    this.ushahidiList.append(client.nextIncident());
+	} // while
     }
     
     /**
@@ -41,6 +44,8 @@ public class UshahidiManager {
      * @return
      */
     public static DoublyLinkedList<UshahidiIncident> getTen(Comparator comp){
+	DoublyLinkedList<UshahidiIncident> list = new DoublyLinkedList<UshahidiIncident>();
+	
 	return null;
     }
     

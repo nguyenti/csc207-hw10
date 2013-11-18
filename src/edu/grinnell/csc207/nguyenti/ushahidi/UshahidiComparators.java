@@ -2,14 +2,18 @@ package edu.grinnell.csc207.nguyenti.ushahidi;
 
 import java.util.Comparator;
 
-public class UshahidiComparators implements Comparator {
+public class UshahidiComparators implements Comparable {
+
 
     @Override
-    public int compare(Object o1, Object o2) {
-	// TODO Auto-generated method stub
-	return 0;
+    public int compareTo(Object o) {
+	return this.compareTo(o);
     }
-
+    
+    
+    public int compareToDec(Object o) {
+	return -1 * this.compareTo(o);
+    }
     
     
 }
